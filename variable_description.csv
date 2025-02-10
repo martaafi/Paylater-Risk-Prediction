@@ -1,0 +1,49 @@
+Table;Columns;Description
+train/test;U_ID;Loan ID
+train/test;FLAG;Target variable (1 - client with late payment more than X days, 0 - all other cases)
+train/test;CONTRACT_TYPE;Identification if loan is cash or revolving
+train/test;GENDER;Gender of the client
+train/test;NUM_OF_CHILDREN;Number of children the client has
+train/test;INCOME;Monthly income of the client
+train/test;APPROVED_CREDIT;Approved credit amount of the loan
+train/test;LOAN_ANNUITY;Loan annuity (amount that must be paid monthly)
+train/test;PRODUCT_PRICE;For consumer loans it is the price of the goods for which the loan is given
+train/test;INCOME_CATEGORY;Clients income type (businessman, working, maternity leave,…)
+train/test;EDUCATION;The client highest education
+train/test;FAMILY_STATUS;Family status of the client
+train/test;HOUSING_CATEGORY;What is the housing situation of the client (renting, living with parents, ...)
+train/test;DAYS_AGE;Client's age in days at the time of application
+train/test;DAYS_WORK;How many days before the application the person started current job
+train/test;DAYS_REGISTRATION;How many days before the application did client change his registration
+train/test;DAYS_SINCE_ID_CHANGE;How many days before the application did client change the identity document with which he applied for the loan
+train/test;APPLY_DAYS;On which day of the week did the client apply for the loan
+train/test;APPLY_HOUR;Approximately at what hour did the client apply for the loan
+train/test;ORGANIZATION_CATEGORY;Type of organization where client works
+train/test;EXTERNAL_SCORE_1;Normalized score from external data source
+train/test;EXTERNAL_SCORE_2;Normalized score from external data source
+train/test;EXTERNAL_SCORE_3;Normalized score from external data source
+previous_application;SK_ID_PREV;ID of previous loan (One loan can have 0,1,2 or more previous loan application)
+previous_application;U_ID;Loan ID
+previous_application;CONTRACT_TYPE;Contract product type (Cash loan, consumer loan [POS] ,...) of the previous application
+previous_application;LOAN_ANNUITY;Loan annuity (amount that must be paid monthly) of previous application
+previous_application;APPLICATION;For how much credit did client ask on the previous application
+previous_application;APPROVED_CREDIT;Final approved credit amount on the previous application. This differs from APPLICATION in a way that the APPLICATION is the amount for which the client initially applied for, but during our approval process he could have received different amount - AMT_CREDIT
+previous_application;AMT_DOWN_PAYMENT;Down payment on the previous application
+previous_application;PRODUCT_PRICE;For consumer loans it is the price of the goods for which the loan is given
+previous_application;APPLY_DAYS;On which day of the week did the client apply for the previous loan
+previous_application;APPLY_HOUR;Approximately at what hour did the client apply for the previous loan
+previous_application;CONTRACT_STATUS;Contract status (approved, cancelled, ...) of previous application
+previous_application;DAYS_DECISION;Relative to current application when was the decision about previous application made
+previous_application;TERM_PAYMENT;Term of previous credit at application of the previous application
+previous_application;YIELD_GROUP;Grouped interest rate into small medium and high of the previous application
+previous_application;FIRST_DRAW;Relative to application date of current application when was the first disbursement of the previous application (in days)
+previous_application;FIRST_DUE;Relative to application date of current application when was the first due supposed to be of the previous application (in days)
+previous_application;TERMINATION;Relative to application date of current application when was the expected termination of the previous application
+previous_application;NFLAG_INSURED_ON_APPROVAL;Did the client requested insurance during the previous application
+payment_history.csv;SK_ID_PREV;ID of previous loan (One loan can have 0,1,2 or more previous loan application)
+payment_history.csv;U_ID;Loan ID
+payment_history.csv;INST_NUMBER;On which installment we observe payment
+payment_history.csv;INST_DAYS;When the installment of previous credit was supposed to be paid (relative to application date of current loan)
+payment_history.csv;PAY_DAYS;When was the installments of previous credit paid actually (relative to application date of current loan)
+payment_history.csv;AMT_INST;What was the prescribed installment amount of previous credit on this installment
+payment_history.csv;AMT_PAY;What the client actually paid on previous credit on this installment
