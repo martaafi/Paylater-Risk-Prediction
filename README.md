@@ -20,4 +20,23 @@ Untuk mengurangi kerugian tersebut, sangat penting bagi PDM Paylater untuk membu
 ## Tools
 - Python
 
+## Model terbaik
+![image](https://github.com/user-attachments/assets/bfe4f88d-be13-44bf-83bc-a49e51502913)
+![image](https://github.com/user-attachments/assets/ca7fc248-a1b4-4114-8d21-154a14326d9c)
+
+Model terbaik untuk prediksi peminjam yang layak diberikan pinjaman atau tidak adalah `RandomForestClassifier` dengan parameter `class_weight`='balanced', `max_depth`=10, dan `n_estimators`=100, dengan nilai `precision` sebesar `0,3`.
+
+## Feature Importance
+![image](https://github.com/user-attachments/assets/11bcddfc-9ba6-4680-a73e-1c1e3d4b04a5)
+
+## Kesimpulan
+Dari serangkaian proses analisis klasifikasi komprehensif yang telah dilakukan sebelumnya, diperoleh bawa algoritma terbaik untuk memprediksi klien yang pantas untuk diberi pinjaman dan tidak (`FLAG`) adalah `RandomForestClassifier` dengan `precision` sebesar `0,3`. Dengan fitur yang paling berpengaruh dalam prediksi model adalah `PRE_LATE`, `PAY_HIS`, `EXTERNAL_SCORE_1`, `EXTERNAL_SCORE_3`, dan `DAYS_WORK`.
+
+## Rekomendasi
+
+Berdasarkan kesimpulan yang diperoleh, perusahaan disarankan untuk memberikan pinjaman kepada peminjam yang memenuhi kriteria berikut:
+
+- Tidak pernah terlambat melakukan pembayaran
+- Tidak memiliki riwayat pembayaran yang buruk atau gagal bayar
+- Memiliki durasi kerja yang cukup lama di pekerjaan saat ini sebelum mengajukan pinjaman. Peminjam dengan pekerjaan yang stabil cenderung memiliki risiko gagal bayar lebih rendah.
 
