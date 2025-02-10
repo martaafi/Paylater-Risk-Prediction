@@ -21,8 +21,8 @@ Untuk mengurangi kerugian tersebut, sangat penting bagi PDM Paylater untuk membu
 - Python
 
 ## Model terbaik
-![image](https://github.com/user-attachments/assets/bfe4f88d-be13-44bf-83bc-a49e51502913)
 ![image](https://github.com/user-attachments/assets/ca7fc248-a1b4-4114-8d21-154a14326d9c)
+![image](https://github.com/user-attachments/assets/ce29d2fa-14d9-4273-9ef5-cc4a4195585c)
 
 Model terbaik untuk prediksi peminjam yang layak diberikan pinjaman atau tidak adalah `RandomForestClassifier` dengan parameter `class_weight`='balanced', `max_depth`=10, dan `n_estimators`=100, dengan nilai `precision` sebesar `0,3`.
 
